@@ -20,17 +20,18 @@ body {
 }
 
 body > * {
-  max-width: 800px;
   padding: 2rem;
 }
 
 body > header {
     text-align: center;
     margin: 0 auto;
+    max-width: 800px;
 }
 
 body > main {
     margin: 0 auto;
+    max-width: 800px;
 }
 
 body > footer {
@@ -40,7 +41,7 @@ body > footer {
 
 .logo {
     width: 400px;
-    height: 400px;
+    aspect-ratio: 1;
     background-image: url(./moonlight.png);
     background-size: cover;
     margin: 0 auto 2rem;
@@ -66,6 +67,10 @@ a:active {
   top: 1px;
 }
 
+.social-links a {
+  border-bottom: none;
+}
+
 blockquote {
   border-left: 5px solid var(--accent-color);
   padding-left: 1rem;
@@ -79,10 +84,6 @@ h1 {
 
 p {
     margin-bottom: 1.5rem;
-}
-
-p:last-child {
-    margin-bottom: 0;
 }
 
 ol,
