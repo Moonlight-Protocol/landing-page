@@ -16,7 +16,7 @@
         <section class="column">
             <h2>As A Bank</h2>
             <p>Are you beta-testing Moonlight as a financial institution?</p>
-            <p>We've already set up a private channel smart contract on Testnet. Now you can connect your financial institution to it!</p>
+            <p>We've already set up a private channel on Testnet. Now you can connect your financial institution to it!</p>
             <p>...</p>
             <p>Now that you have your URL, it's time to try Moonlight as an end-user.</p>
         </section>
@@ -24,14 +24,23 @@
         <section class="column">
             <h2>As A User</h2>
             <p>Ready to send some private, on-chain transactions?</p>
-            <p>When Moonlight reaches production, you'll use it from the UI of your financial institution. It will feel like using any other crypto wallet or bank's send/receive functionality. Until then, it requires some manual setup!</p>
+            <p>When Moonlight reaches production, you'll use it from the UI of your financial institution. It will feel like using any other crypto wallet or bank's "send/receive" functionality. Until then, it requires some manual setup!</p>
             <p>Start by installing our <a href="#todo">Chrome Browser Extension</a>.</p>
             <p>After it's installed, you'll need to:</p>
             <ol>
-              <li>Create an account</li>
+              <li>Create/import account</li>
               <li>Add a privacy channel (a contract ID)</li>
               <li>Add a privacy provider (a URL)</li>
             </ol>
+            <p>Here's a little more info about each step:</p>
+            <h3>1. Create/import account</h3>
+            <p>If you're familiar with setting up other crypto wallets, this should be straightforward. Follow the steps to create a new wallet account. <strong>Make sure you are using the Testnet network</strong>.</p>
+            <h3>2. Add a privacy channel</h3>
+            <p>For the current beta test, the Moonlight team has deployed a single privacy channel on Stellar's Testnet. We'll explain more about this soon; for now all you need to know is that each privacy channel is a smart contract. You need to know the privacy channel's contract ID, and you can optionally give it a name (this name is just for you; you can set it to whatever you want).</p>
+            <p>In the Moonlight Wallet extension, find the "Private Channels" / "Moonlight Channels" list. It will be empty, for now. Click the `+` to configure a new one. <strong>Set "Network" to "Test". Set "Contract ID" to "C…".</strong> Set the name to whatever you want. "Moonlight Beta" is reasonable.</p>
+            <h3>3. Add a privacy provider</h3>
+            <p>This is a financial institution. In the production version of Moonlight, you would access Moonlight via their UI. For now, you need to know their URL. (If you are also testing Moonlight <em>as</em> a privacy provider, you will have already configured/provisioned your service following the "As A Bank" instructions. You can now paste in your URL.)</p>
+            <p>The Moonlight extension allows you to specify a "Provider Name"—this is your own private note. Set it to anything you want.</p>
         </section>
     </main>
 </body>
