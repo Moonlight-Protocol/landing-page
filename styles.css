@@ -106,9 +106,6 @@ ol, ul { list-style-position: inside; }
 
 h2 { font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; letter-spacing: -0.01em; }
 
-.columns { align-items: flex-start; display: flex; gap: 2rem; }
-.column { flex: 1; border: 2px solid var(--accent-color); padding: 2rem; }
-
 @media (min-width: 720px) {
   :root { font-size: 22px }
   .value-props { grid-template-columns: repeat(3, 1fr); }
