@@ -1,48 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beta Test Moonlight</title>
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="logo" title="Moonlight"></div>
-        <h1>Beta Test Moonlight</h1>
+      <div class="logo" title="Moonlight"></div>
+      <h1>Beta Test <a href="/">Moonlight</a></h1>
     </header>
-    
-    <main class="columns">
-        <section class="column">
-            <h2>As A Bank</h2>
-            <p>Are you beta-testing Moonlight as a financial institution?</p>
-            <p>We've already set up a private channel on Testnet. Now you can connect your financial institution to it!</p>
-            <p>...</p>
-            <p>Now that you have your URL, it's time to try Moonlight as an end-user.</p>
-        </section>
-        
-        <section class="column">
-            <h2>As A User</h2>
-            <p>Ready to send some private, on-chain transactions?</p>
-            <p>When Moonlight reaches production, you'll use it from the UI of your financial institution. It will feel like using any other crypto wallet or bank's "send/receive" functionality. Until then, it requires some manual setup!</p>
-            <p>Start by installing our <a href="#todo">Chrome Browser Extension</a>.</p>
-            <p>After it's installed, you'll need to:</p>
-            <ol>
-              <li>Create/import account</li>
-              <li>Add a privacy channel (a contract ID)</li>
-              <li>Add a privacy provider (a URL)</li>
-            </ol>
-            <p>Here's a little more info about each step:</p>
-            <h3>1. Create/import account</h3>
-            <p>If you're familiar with setting up other crypto wallets, this should be straightforward. Follow the steps to create a new wallet account. <strong>Make sure you are using the Testnet network</strong>.</p>
-            <h3>2. Add a privacy channel</h3>
-            <p>For the current beta test, the Moonlight team has deployed a single privacy channel on Stellar's Testnet. We'll explain more about this soon; for now all you need to know is that each privacy channel is a smart contract. You need to know the privacy channel's contract ID, and you can optionally give it a name (this name is just for you; you can set it to whatever you want).</p>
-            <p>In the Moonlight Wallet extension, find the "Private Channels" / "Moonlight Channels" list. It will be empty, for now. Click the `+` to configure a new one. <strong>Set "Network" to "Test". Set "Contract ID" to "C…".</strong> Set the name to whatever you want. "Moonlight Beta" is reasonable.</p>
-            <h3>3. Add a privacy provider</h3>
-            <p>This is a financial institution. In the production version of Moonlight, you would access Moonlight via their UI. For now, you need to know their URL. (If you are also testing Moonlight <em>as</em> a privacy provider, you will have already configured/provisioned your service following the "As A Bank" instructions. You can now paste in your URL.)</p>
-            <p>The Moonlight extension allows you to specify a "Provider Name"—this is your own private note. Set it to anything you want.</p>
-            <p>When Moonlight reaches production, it will have multiple privacy <em>channels</em>, and each channel will have a <em>unique</em> list of privacy <em>providers</em>. You (or your privacy provider) will need to ensure that the privacy provider is configured for the correct channel. For now, we are beta testing with a single privacy channel, so this nuance is lost.</p>
-        </section>
+
+    <main>
+      <p>Moonlight is on testnet! Help us test it.</p>
+      <h2>How does Moonlight work?</h2>
+      <p>In Moonlight, groups of banks, wallets, or other financial institutions can work together to create privacy channels and offer privacy-as-a-service to end-users, who are able to switch from one provider to another with ease, all while maintaining custody of their own funds and a consistent Moonlight wallet address. Think of this Moonlight wallet address as containing the best attributes of a cryptocurrency public key and a bank routing+account number. Like a bank routing+account number, it reveals nothing of a user’s balance or transaction history. Like a cryptocurrency public key, it can be used as a consistent, public-facing pseudonym.</p>
+      <p>Behind the scenes, these Moonlight wallet addresses get decomposed into many composite “addresses”, implemented using a pattern familiar to Bitcoin and Cardano enthusiasts: UTXOs. One traditional public/private keypair can be used to derive endless UTXO “addresses” (they’re not really addresses; not the way you think of them; not quite). Except: it’s not behind the scenes. Not all of it. Transactions between these UTXOs all happens on-chain, on Stellar, out in the open. The part that’s out-of-sight, behind the scenes, is onboarding: turning your crypto assets into funded UTXOs on Moonlight. This part requires a privacy provider, which will batch these onboarding events and create decoy UTXOs, to make it hard to trace one input address to the in-the-public UTXOs. Every transaction, every send-and-receive, also requires sign-off from a privacy provider, who can mix in a custom number of decoy UTXOs per-transaction, to customize the level of obfuscation based on the needs of the user.</p>
+      <p>In this way, privacy providers—and privacy providers alone—can tie Moonlight UTXOs to specific blockchain addresses. Which is to say: privacy providers, between the lot of them, maintain an audit trail. They can be audited. If a regulator audits a privacy provider, requesting information about specific transactions, the privacy provider can fulfill this request.</p>
+      <p>Did you catch all that? Moonlight provides <em>customizable</em>, <em>regulatory-friendly</em>, <em>non-custodial</em> privacy for blockchain.</p>
+      <p>One more thing: any blockchain can be used as input. Moonlight UTXOs will still always be bookkept on Stellar’s public ledger, but the input address, the input public key, can be from any blockchain. As can the destination address. Moonlight is implemented on Stellar, but not limited to it.</p>
+      <img src="erdiagram.png" alt="An entity-relationship diagram showing that a Quorum has many Privacy Channels, which each have many Providers. End-users choose, per-transaction, which Provider to use." />
+      <p>A <strong>Quorum</strong> is one or more banks, wallets, or financial intitutions, all probably co-located in a specific regulatory zone (like the USA, Europe, or South America).</p>
+      <p>Each Quorum can create one or more <strong>Privacy Channels</strong> for each asset they want to allow users to send &amp; receive.</p>
+      <p>Each institution participating in the Quorum can act as a <strong>Privacy Provider</strong> for it. The existing Quorum also decides the rules for allowing new institutions/providers to join their Quorum.</p>
+      <p><strong>End-users</strong> can onboard to one or more privacy providers, and then choose per-transaction which to use. Users maintain custody of their own accounts, and send draft transactions to a privacy provider—“send 10 XLM to Alice, using high/medium/low obfuscation.” The provider can then sign and submit the transaction to the network.</p>
+      <p>(Time will tell how common this per-transaction selection of privacy providers will be, once Moonlight reaches production on mainnet. It’s possible that end-users will have a more traditional financial institution onboarding experience; that they will either switch to a new bank that supports Moonlight, or that their existing bank adds support for Moonlight, and then their familiar “send/receive” UI will use Moonlight on the backend, possibly without the user knowing anything about it.)</p>
+      <p>The obfuscation setting, also called entropy, determines how many sub-accounts, implemented as <a href="https://en.wikipedia.org/wiki/Unspent_transaction_output">UTXOs</a>, the transaction amount is broken into and tumbled through. In addition to the sender’s &amp; receiver’s accounts being broken into UTXOs, the Privacy Provider will also mix other random UTXOs into the transaction, breaking traceability for outside observers.</p>
+      <p>If regulators have questions about certain transactions, they can audit privacy providers to tie Moonlight’s UTXOs to specific accounts. If the privacy provider is a non-custodial wallet, these accounts will be regular Stellar/blockchain accounts or public keys, allowing regulatory agencies to proceed with traditional blockchain regulation approaches. (Note that Moonlight’s UTXO accounts are on Stellar, but the source account could be on a different blockchain.) If the privacy provider is a custodial bank or financial institution, they will be able to tie UTXOs to real-world IDs.</p>
+      <h2 id="what-should-you-test" tabindex="-1"><a class="anchor" name="what-should-you-test" tabindex="-1" href="#what-should-you-test"><span class="octicon octicon-link"></span></a>What should you test?</h2>
+      <p>When we said above that “Moonlight is on testnet,” we specifically meant that we have already deployed a Privacy Channel contract to testnet:</p>
+      <ul>
+        <li>Testnet Privacy Channel for Beta Test: <a href="https://stellar.expert/explorer/testnet/contract/CDMZSHMT2AIL2UG7XBOHZKXM6FY3MUP75HAXUUSAHLGRQ2VWPGYKPM5T">CDMZSHMT2AIL2UG7XBOHZKXM6FY3MUP75HAXUUSAHLGRQ2VWPGYKPM5T</a></li>
+      </ul>
+      <p>You are welcome to test the entire workflow of Moonlight! If you are so motivated, go ahead and clone <a href="https://github.com/Moonlight-Protocol/">the repositories</a>, build the contracts, deploy <a href="https://github.com/Moonlight-Protocol/provider-platform">your own Privacy Channel</a>, and test the whole end-to-end workflow. You could also just deploy your own Privacy Provider, and message us to get it added to the existing testnet privacy channel. Just follow the instructions in <a href="https://github.com/Moonlight-Protocol/provider-platform">the provider-platform README</a>.</p>
+      <p>But first, you probably want to start by testing Moonlight as an end-user. This requires five steps:</p>
+      <h3 id="step-1-install-the-wallet" tabindex="-1"><a class="anchor" name="step-1-install-the-wallet" tabindex="-1" href="#step-1-install-the-wallet"><span class="octicon octicon-link"></span></a>Step 1: Install the wallet</h3>
+      <p>As stated in the “how it works” section above, we expect that most users will eventually use Moonlight from the UI of their bank, without even realizing that their experience is powered by Moonlight. For now, you need to use Moonlight via our custom wallet.</p>
+      <p>Our wallet is a Chrome browser extension, so you will need to use a Chrome-based browser like <a href="https://www.google.com/chrome/index.html">Chrome itself</a> or <a href="https://brave.com/">Brave</a>.</p>
+      <p>On your <a href="chrome://extensions">chrome://extensions</a> page, make sure you toggle “Developer Mode” to the “On” position in the top right.</p>
+      <p>Now download the latest version of our extension from <a href="https://github.com/Moonlight-Protocol/browser-wallet/releases">our Releases page</a>, selecting the Zip file containing the best version for your operating system. Unzip it.</p>
+      <p>Back in <a href="chrome://extensions">chrome://extensions</a>, click “Load unpacked” in the top left. Select the unzipped folder.</p>
+      <p>You should be good to go!</p>
+      <h3 id="step-2-create-or-import-an-account" tabindex="-1"><a class="anchor" name="step-2-create-or-import-an-account" tabindex="-1" href="#step-2-create-or-import-an-account"><span class="octicon octicon-link"></span></a>Step 2: Create or import an account</h3>
+      <p>Moonlight Wallet will have you create or import an account like many other crypto wallets. This may be familiar to you. Follow the instructions.</p>
+      <h3 id="step-3-add-privacy-channel" tabindex="-1"><a class="anchor" name="step-3-add-privacy-channel" tabindex="-1" href="#step-3-add-privacy-channel"><span class="octicon octicon-link"></span></a>Step 3: Add privacy channel</h3>
+      <p>You need to tell your Moonlight Wallet what privacy channels &amp; providers to use.</p>
+      <p>Add a new Privacy Channel. Select the “Test” network and set the contract ID to the one shown above:</p>
+      <pre><code>CDMZSHMT2AIL2UG7XBOHZKXM6FY3MUP75HAXUUSAHLGRQ2VWPGYKPM5T
+      </code></pre>
+      <p>You can set the “Provider Note” to anything you like; this appears only to you.</p>
+      <h3 id="step-4-add-privacy-providers" tabindex="-1"><a class="anchor" name="step-4-add-privacy-providers" tabindex="-1" href="#step-4-add-privacy-providers"><span class="octicon octicon-link"></span></a>Step 4: Add Privacy Providers</h3>
+      <p>Just like Privacy Channels, the wallet extension doesn’t know anything about Privacy Providers out-of-the-box. You need to configure it.</p>
+      <p>We’ve deployed two Privacy Providers for use on Testnet during this beta test. You can add them both. Click to add a provider. Make sure you select Test network and the Privacy Channel you already added. Then:</p>
+      <ul>
+        <li>Provider URL:
+          <ul>
+            <li><code>moonlight-beta-privacy-provider-a.fly.dev</code></li>
+            <li><code>moonlight-beta-privacy-provider-b.fly.dev</code></li>
+          </ul>
+        </li>
+        <li>Provider Note: Anything you want; this appears only to you. Perhaps “Provider A” and “Provider B”</li>
+      </ul>
+      <p>Note that Provider A is located on servers in Amsterdam, and Provider B in São Paulo. You may want to prefer the one that results in faster API requests for your location.</p>
+      <h3 id="step-5-send--receive" tabindex="-1"><a class="anchor" name="step-5-send--receive" tabindex="-1" href="#step-5-send--receive"><span class="octicon octicon-link"></span></a>Step 5: Send &amp; receive!</h3>
+      <p>Go through steps 2-4 as many times as you like, creating multiple accounts.</p>
+      <p>Then you can send funds from one to the other!</p>
     </main>
-</body>
+  </body>
 </html>
