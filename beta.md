@@ -55,7 +55,7 @@ When we said above that "Moonlight is on testnet," we specifically meant that we
 
 * Testnet Privacy Channel for Beta Test: [CDMZSHMT2AIL2UG7XBOHZKXM6FY3MUP75HAXUUSAHLGRQ2VWPGYKPM5T](https://stellar.expert/explorer/testnet/contract/CDMZSHMT2AIL2UG7XBOHZKXM6FY3MUP75HAXUUSAHLGRQ2VWPGYKPM5T)
 
-You are welcome to test the entire workflow of Moonlight! If you are so motivated, go ahead and clone [the repositories](https://github.com/Moonlight-Protocol/), build the contracts, deploy [your own Privacy Channel](https://github.com/Moonlight-Protocol/provider-platform), and test the whole end-to-end workflow. You could also just deploy your own Privacy Provider, and message us to get it added to the existing testnet privacy channel. Just follow the instructions in [the provider-platform README](https://github.com/Moonlight-Protocol/provider-platform).
+You are welcome to test the entire workflow of Moonlight! If you are so motivated, go ahead and build & deploy [the contracts](https://github.com/Moonlight-Protocol/soroban-core), deploy [your own Privacy Channel](https://github.com/Moonlight-Protocol/provider-platform), and test the whole end-to-end workflow. You could also just deploy your own Privacy Provider, and message us to get it added to the existing testnet privacy channel.
 
 But first, you probably want to start by testing Moonlight as an end-user. This requires five steps:
 
