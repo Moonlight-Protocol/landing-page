@@ -1,0 +1,12 @@
+{
+  "channels": [
+    {
+      "networkPassphrase": "Test SDF Network ; September 2015",
+      "id": "CDMZSHMT2AIL2UG7XBOHZKXM6FY3MUP75HAXUUSAHLGRQ2VWPGYKPM5T",
+      "providers": [
+        { "url": "https://moonlight-beta-privacy-provider-a.fly.dev", "note": "Provider A – Amsterdam" },
+        { "url": "https://moonlight-beta-privacy-provider-b.fly.dev", "note": "Provider B – São Paulo" }
+      ]
+    }
+  ]
+}
