@@ -1,12 +1,17 @@
 {
-  "channels": [
+  "Test SDF Network ; September 2015": [
     {
-      "networkPassphrase": "Test SDF Network ; September 2015",
-      "id": "CDMZSHMT2AIL2UG7XBOHZKXM6FY3MUP75HAXUUSAHLGRQ2VWPGYKPM5T",
+      "id": "C123… QUORUM AUTH CONTRACT ID",
+      "note": "Network of Banks / Wallets / Privacy Providers (for example: \"South American Banks\")",
       "providers": [
-        { "url": "https://moonlight-beta-privacy-provider-a.fly.dev", "note": "Provider A – Amsterdam" },
-        { "url": "https://moonlight-beta-privacy-provider-b.fly.dev", "note": "Provider B – São Paulo" }
+        { "url": "https://moonlight-beta-privacy-provider-a.fly.dev", "note": "Provider A (for example: \"Santander\")" },
+        { "url": "https://moonlight-beta-privacy-provider-b.fly.dev", "note": "Provider B (for example: \"Itaú\")" }
+      ],
+      "channels": [
+        "CDMZSHMT2AIL2UG7XBOHZKXM6FY3MUP75HAXUUSAHLGRQ2VWPGYKPM5T",
+        "C123… USDC CHANNEL CONTRACT ID"
       ]
     }
   ]
+
 }
