@@ -14,7 +14,7 @@ In Moonlight, groups of banks, wallets, or other financial institutions can work
 
 Behind the scenes, these Moonlight wallet addresses get decomposed into many composite "addresses", implemented using a pattern familiar to Bitcoin and Cardano enthusiasts: UTXOs. One traditional public/private keypair can be used to derive endless UTXO "addresses" (they're not really addresses; not the way you think of them; not quite). Except: it's not behind the scenes. Not all of it. Transactions between these UTXOs all happens on-chain, on Stellar, out in the open. The part that's out-of-sight, behind the scenes, is onboarding: turning your crypto assets into funded UTXOs on Moonlight. This part requires a privacy provider, which will batch these onboarding events and create decoy UTXOs, to make it hard to trace one input address to the in-the-public UTXOs. Every transaction, every send-and-receive, also requires sign-off from a privacy provider, who can mix in a custom number of decoy UTXOs per-transaction, to customize the level of obfuscation based on the needs of the user.
 
-In this way, privacy providers—and privacy providers alone—can tie Moonlight UTXOs to specific blockchain addresses. Which is to say: privacy providers, between the lot of them, maintain an audit trail. They can be audited. If a regulator audits a privacy provider, requesting information about specific transactions, the privacy provider can fulfill this request.
+In this way, privacy providers (and privacy providers alone!) can tie Moonlight UTXOs to specific blockchain addresses. Which is to say: privacy providers, between the lot of them, maintain an audit trail. They can be audited. If a regulator audits a privacy provider, requesting information about specific transactions, the privacy provider can fulfill this request.
 
 Did you catch all that? Moonlight provides _customizable_, _regulatory-friendly_, _non-custodial_ privacy for blockchain.
 
@@ -39,7 +39,7 @@ Each Quorum can create one or more **Privacy Channels** for each asset they want
 
 Each institution participating in the Quorum can act as a **Privacy Provider** for it. The existing Quorum also decides the rules for allowing new institutions/providers to join their Quorum.
 
-**End-users** can onboard to one or more privacy providers, and then choose per-transaction which to use. Users maintain custody of their own accounts, and send draft transactions to a privacy provider—"send 10 XLM to Alice, using high/medium/low obfuscation." The provider can then sign and submit the transaction to the network.
+**End-users** can onboard to one or more privacy providers, and then choose per-transaction which to use. Users maintain custody of their own accounts, and send draft transactions to a privacy provider, for example: "send 10 XLM to Alice, using high/medium/low obfuscation." The provider can then sign and submit the transaction to the network.
 
 (Time will tell how common this per-transaction selection of privacy providers will be, once Moonlight reaches production on mainnet. It's possible that end-users will have a more traditional financial institution onboarding experience; that they will either switch to a new bank that supports Moonlight, or that their existing bank adds support for Moonlight, and then their familiar "send/receive" UI will use Moonlight on the backend, possibly without the user knowing anything about it.)
 
