@@ -4,8 +4,7 @@
       "id": "C123… QUORUM AUTH CONTRACT ID",
       "note": "Network of Banks / Wallets / Privacy Providers (for example: \"South American Banks\")",
       "providers": [
-        { "url": "https://moonlight-beta-privacy-provider-a.fly.dev", "note": "Provider A (for example: \"Santander\")" },
-        { "url": "https://moonlight-beta-privacy-provider-b.fly.dev", "note": "Provider B (for example: \"Itaú\")" }
+        { "url": "https://moonlight-beta-privacy-provider-a.fly.dev", "note": "Privacy Provider (for example: \"Santander\")" }
       ],
       "channels": [
         "CDMZSHMT2AIL2UG7XBOHZKXM6FY3MUP75HAXUUSAHLGRQ2VWPGYKPM5T",

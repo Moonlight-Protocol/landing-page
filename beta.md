@@ -93,14 +93,10 @@ You can set the "Provider Note" to anything you like; this appears only to you.
 
 Just like Privacy Channels, the wallet extension doesn't know anything about Privacy Providers out-of-the-box. You need to configure it.
 
-We've deployed two Privacy Providers for use on Testnet during this beta test. You can add them both. Click to add a provider. Make sure you select Test network and the Privacy Channel you already added. Then:
+We've deployed a Privacy Provider for use on Testnet during this beta test. Click to add a provider. Make sure you select Test network and the Privacy Channel you already added. Then:
 
-* Provider URL:
-  * `moonlight-beta-privacy-provider-a.fly.dev`
-  * `moonlight-beta-privacy-provider-b.fly.dev`
-* Provider Note: Anything you want; this appears only to you. Perhaps "Provider A" and "Provider B"
-
-Note that Provider A is located on servers in Amsterdam, and Provider B in São Paulo. You may want to prefer the one that results in faster API requests for your location.
+* Provider URL: `moonlight-beta-privacy-provider-a.fly.dev`
+* Provider Note: Anything you want; this appears only to you.
 
 ### Step 5: Send & receive!
 
