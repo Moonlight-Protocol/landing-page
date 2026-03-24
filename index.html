@@ -3,71 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moonlight - A Privacy-First Blockchain Protocol</title>
-    <link rel="icon" href="favicon.png" />
+    <title>Moonlight Protocol - Private web3 transactions. Built for compliance.</title>
+    <meta name="description" content="Moonlight is a privacy layer for blockchain payments. Transactions are confidential on-chain but auditable when required. Built on Stellar.">
+    <link rel="icon" href="favicon.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Hero -->
     <header>
-        <div class="logo" title="Moonlight"></div>
-        <h1 class="tagline">A Privacy-First Blockchain Protocol<br>by <a href="https://theaha.co">The Aha Company</a></h1>
+        <div class="logo" title="Moonlight Protocol"></div>
+        <h1>Private web3 transactions.<br>Built for compliance.</h1>
+        <p class="subtitle">Moonlight is a privacy layer for blockchain payments. Transactions are confidential on-chain but auditable when required.</p>
+        <div class="hero-cta">
+            <a href="https://moonlight-10.gitbook.io/moonlight-docs" class="btn btn-primary">Read the docs</a>
+            <a href="https://github.com/Moonlight-Protocol" class="btn btn-secondary">View on GitHub</a>
+        </div>
     </header>
-    
+
     <main>
-        <section class="hero">
-            <h2>Finance cannot function without confidentiality.</h2>
-            <p class="large">Moonlight offers financial institutions the best of both worlds: the instant settlement, programmable assets, and global reach of blockchains, with the privacy and regulatory compliance of traditional finance.</p>
+
+        <!-- The Problem -->
+        <section class="section">
+            <h2>The problem</h2>
+            <p>Public blockchains expose every transaction. Wallet balances, payment amounts, counterparties. All visible to anyone.</p>
+            <p>Banks, payment providers, and businesses cannot operate this way. They need confidentiality for their customers and themselves.</p>
+            <p>Existing privacy solutions solve this by making transactions anonymous. Regulators shut them down. Tornado Cash proved that privacy without accountability is a dead end.</p>
         </section>
 
-        <section class="value-props">
-            <div class="prop">
-                <h3>Private Yet Auditable</h3>
-                <p>With Moonlight, transactions stay private but remain auditable. You can prove compliance without revealing everything.</p>
-            </div>
-            <div class="prop">
-                <h3>Compliant Blockchain</h3>
-                <p>Institutions can finally use blockchain safely. Everyday people can pay without fear.</p>
-            </div>
-            <div class="prop">
-                <h3>Confidential By Design</h3>
-                <p>Finance requires privacy. Moonlight delivers confidentiality where it belongs—in your transactions.</p>
-            </div>
-        </section>
-
-        <section class="platform-info">
-            <div class="platform-card stellar">
-                <h3>Built on Stellar</h3>
-                <div class="stellar-logo">
-                    <svg viewBox="0 0 160 40" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_27_1534)"><path fill-rule="evenodd" clip-rule="evenodd" d="M40.6 5.23017L34.908 8.13017L7.422 22.1302C7.32906 21.4213 7.28229 20.7071 7.282 19.9922C7.28576 17.1395 8.0347 14.3374 9.45464 11.8633C10.8746 9.38919 12.9163 7.32896 15.3774 5.8867C17.8386 4.44444 20.6338 3.67018 23.4863 3.64062C26.3388 3.61106 29.1495 4.32722 31.64 5.71817L34.898 4.05817L35.384 3.81017C32.3995 1.64394 28.8741 0.345091 25.1975 0.0571559C21.521 -0.230779 17.8364 0.503418 14.551 2.1786C11.2656 3.85379 8.5074 6.40472 6.58114 9.54948C4.65488 12.6942 3.63562 16.3104 3.636 19.9982C3.636 20.5075 3.65533 21.0148 3.694 21.5202C3.74815 22.2358 3.58944 22.9514 3.23784 23.5771C2.88623 24.2027 2.35744 24.7104 1.718 25.0362L0 25.9122V29.9982L5.058 27.4202L6.696 26.5842L8.31 25.7622L37.286 10.9982L40.542 9.34017L47.272 5.91017V1.82617L40.6 5.23017ZM47.272 10L9.956 29L6.7 30.662L0 34.076V38.158L6.654 34.768L12.346 31.868L39.86 17.848C39.953 18.5616 39.9998 19.2804 40 20C39.9982 22.8559 39.2495 25.6617 37.8282 28.1388C36.4069 30.6159 34.3624 32.6782 31.8976 34.1209C29.4329 35.5637 26.6337 36.3366 23.7779 36.3631C20.9221 36.3896 18.1091 35.6687 15.618 34.272L15.418 34.378L11.886 36.178C14.8699 38.3443 18.3945 39.6435 22.0705 39.9322C25.7465 40.2208 29.4307 39.4876 32.7161 37.8135C36.0014 36.1395 38.7601 33.5898 40.6872 30.4461C42.6143 27.3025 43.6348 23.6873 43.636 20C43.636 19.486 43.616 18.972 43.578 18.464C43.5239 17.7486 43.6825 17.0332 44.0337 16.4077C44.3849 15.7821 44.9131 15.2743 45.552 14.948L47.272 14.072V10ZM93.3438 23.6699C93.3438 17.0359 97.7718 12.8359 103.48 12.8359C109.886 12.8359 113.654 18.1559 113.226 24.7959H97.1497C97.2657 29.2999 100.528 31.4739 103.596 31.4739C106.704 31.4739 108.412 30.0759 109.304 28.0179H112.954C112.022 31.5919 108.684 34.5819 103.596 34.5819C96.9937 34.5819 93.3438 29.8439 93.3438 23.6699ZM103.48 15.8639C100.372 15.8639 97.4997 17.5659 97.1878 21.7659H109.498C109.382 18.8159 107.246 15.8639 103.48 15.8639ZM71.8492 17.9181L68.5972 17.1801C65.9472 16.5961 63.9972 15.3561 63.9972 12.8701C63.9972 9.72406 67.7972 8.75406 69.9772 8.75406C72.7772 8.75406 76.0352 9.88006 76.9672 13.1021H80.8132C79.6852 7.70206 75.2132 5.41406 70.1332 5.41406C65.5892 5.41406 59.9592 7.70606 59.9592 13.1021C59.9592 17.7621 63.8032 19.9381 67.6872 20.7921L71.1972 21.5301C74.7312 22.3461 77.2552 23.5101 77.2552 26.5001C77.2552 29.3001 74.8872 31.2381 70.6932 31.2381C66.3052 31.2381 63.6652 29.2181 62.9272 25.3361H59.0352C59.7732 30.9361 63.9672 34.5781 70.6072 34.5781C76.2072 34.5781 81.3252 31.6261 81.3252 26.1501C81.3252 20.4821 76.1612 18.8501 71.8492 17.9181ZM85.3801 7.9375H88.9141V13.1795H92.8741V16.0155H88.9141V28.4035C88.9141 30.5775 89.0681 31.1215 91.0881 31.1215H92.8741V34.0715H90.3121C86.3121 34.0715 85.3801 33.1795 85.3801 28.8295V16.0155H82.0781V13.1795H85.3801V7.9375ZM158.938 13.0675C156.18 13.1835 154.084 14.4675 153.036 16.8335V13.1835H149.578V34.0755H153.112V23.1255C153.112 18.4655 154.744 16.7255 158.006 16.7255C158.669 16.7256 159.331 16.7778 159.986 16.8815V13.1055C159.638 13.0752 159.288 13.0625 158.938 13.0675ZM146.215 21.3817L146.177 26.1977C146.137 29.7257 146.293 32.0937 146.719 34.0797H143.147C142.996 33.1291 142.905 32.1698 142.875 31.2077C141.595 33.3857 139.459 34.5857 135.731 34.5857C131.809 34.5857 128.547 32.4097 128.547 28.5657C128.547 23.6257 134.139 22.1597 142.681 21.2257V20.7217C142.681 16.8777 140.585 15.6357 137.943 15.6357C134.993 15.6357 133.323 17.1897 133.167 19.7897H129.517C129.827 15.2857 133.867 12.7617 137.905 12.7617C143.769 12.7617 146.255 15.4397 146.215 21.3817ZM136.507 31.7897C139.809 31.7897 142.953 30.2737 142.953 25.3437V24.0217C136.545 24.6437 132.469 25.6137 132.469 28.4877C132.469 30.4697 133.983 31.7897 136.507 31.7897ZM119.136 5.90625H115.602V34.0742H119.136V5.90625ZM122.668 5.90625H126.202V34.0742H122.668V5.90625Z" fill="currentColor"></path></g></svg>
+        <!-- How Moonlight is different -->
+        <section class="section">
+            <h2>Private, not anonymous</h2>
+            <p>Moonlight separates visibility from accountability.</p>
+            <div class="two-col">
+                <div class="card">
+                    <h3>On-chain</h3>
+                    <p>Transactions are confidential. Observers cannot see who sent what to whom. Amounts, sender, and recipient are hidden.</p>
                 </div>
-                <p>Moonlight leverages Stellar's speed, low cost, and global infrastructure to deliver privacy-first transactions at scale.</p>
-            </div>
-            <div class="platform-card">
-                <h3>Works with any blockchain.</h3>
-                <p>Our protocol is designed to extend beyond Stellar, bringing privacy and compliance to any blockchain ecosystem.</p>
+                <div class="card">
+                    <h3>Off-chain</h3>
+                    <p>Privacy Providers hold transaction data. When a regulator or auditor asks, the provider can produce the records. Privacy with a compliance trail.</p>
+                </div>
             </div>
         </section>
 
-        <section class="cta">
-            <h2>Ready to bring privacy to your blockchain infrastructure?</h2>
-            <a href="beta.html" class="cta-button">Join the Beta Test</a>
-            <p class="contact">Questions? Contact us at <a href="mailto:moonlight@theaha.co">moonlight@theaha.co</a></p>
+        <!-- How it works -->
+        <section class="section">
+            <h2>How it works</h2>
+            <div class="steps">
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <div>
+                        <h3>Councils set the rules</h3>
+                        <p>A council is a governance contract that defines which Privacy Providers can operate and under what jurisdiction. One council per regulatory region.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <div>
+                        <h3>Providers process transactions</h3>
+                        <p>Privacy Providers onboard users, verify compliance, and batch transactions together. The batching makes individual transactions indistinguishable on-chain.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <div>
+                        <h3>Users transact privately</h3>
+                        <p>Users deposit, send, and withdraw through their provider. The experience is a normal payment. The privacy happens in the background.</p>
+                    </div>
+                </div>
+            </div>
         </section>
+
+        <!-- Who it's for -->
+        <section class="section">
+            <h2>Who it's for</h2>
+            <div class="audience-grid">
+                <div class="card">
+                    <h3>Institutions</h3>
+                    <p>Banks and payment companies that want to operate as Privacy Providers. Run the infrastructure, onboard customers, earn fees per transaction.</p>
+                </div>
+                <div class="card">
+                    <h3>Regulators and consortiums</h3>
+                    <p>Organizations that want to govern councils. Define which providers can operate, set compliance requirements, oversee jurisdictions.</p>
+                </div>
+                <div class="card">
+                    <h3>Developers</h3>
+                    <p>Build privacy into your app. The SDK and API handle key derivation, transaction construction, and provider communication. Published on JSR.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ecosystem -->
+        <section class="section">
+            <h2>Ecosystem</h2>
+            <div class="links-grid">
+                <a href="https://moonlight-10.gitbook.io/moonlight-docs" class="link-card">
+                    <h3>Documentation</h3>
+                    <p>Protocol architecture, SDK reference, and integration guides.</p>
+                </a>
+                <a href="https://network-dashboard.fly.storage.tigris.dev" class="link-card">
+                    <h3>Network Dashboard</h3>
+                    <p>Live view of councils, channels, and transaction activity.</p>
+                </a>
+                <a href="https://github.com/Moonlight-Protocol" class="link-card">
+                    <h3>GitHub</h3>
+                    <p>Smart contracts, SDK, provider platform, and reference apps.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Built on Stellar -->
+        <p class="stellar-note">Built on <a href="https://stellar.org">Stellar</a> with Soroban smart contracts. Funded by the Stellar Community Fund.</p>
+
     </main>
 
     <footer>
-        <p>Copyright <a href="https://theaha.co">The Aha Company</a>, some rights reserved.</p>
-        <div class="social-links">
-            <a href="https://github.com/Moonlight-Protocol" target="_blank" rel="noopener" aria-label="GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/company/theahaco" target="_blank" rel="noopener" aria-label="LinkedIn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-            </a>
-            <a href="https://x.com/theahaco" target="_blank" rel="noopener" aria-label="X (Twitter)">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            </a>
+        <div class="footer-content">
+            <p>&copy; <a href="https://theaha.co">The Aha Company</a></p>
+            <div class="footer-links">
+                <a href="mailto:moonlight@theaha.co">moonlight@theaha.co</a>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/Moonlight-Protocol" target="_blank" rel="noopener" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/company/theahaco" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="https://x.com/theahaco" target="_blank" rel="noopener" aria-label="X">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+            </div>
         </div>
     </footer>
+
 </body>
 </html>
